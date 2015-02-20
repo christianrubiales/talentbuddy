@@ -10,9 +10,18 @@ public class Sqrt {
 		double t = n;
 		double e = 1e-15;
 		
-		while (Math.abs(t - n/t) > e * t) {
+		while (abs(t - n/t) > e * t) {
 			t = (t + n/t)/2;
 		}
 		System.out.println((int) t);
     }
+	
+
+	public static double abs(double n) {
+		if (n > 0) {
+			return n;
+		} else {
+			return -1 * n;
+		}
+	}
 }
