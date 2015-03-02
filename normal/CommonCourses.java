@@ -1,4 +1,4 @@
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -7,7 +7,7 @@ public class CommonCourses {
 
     public static void get_common_courses(Integer[] courses1, Integer[] courses2) {
         Set<Integer> set = new TreeSet<Integer>();
-        Set<Integer> set2 = new LinkedHashSet<Integer>();
+        Set<Integer> set2 = new HashSet<Integer>();
         
         for (Integer i : courses2) {
             set2.add(i);
