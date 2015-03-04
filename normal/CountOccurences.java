@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
-
 
 /**
  * Binary search for the index, increment counter while the values to the left and to the right are equal to the key.
