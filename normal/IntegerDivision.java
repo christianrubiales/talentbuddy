@@ -1,11 +1,6 @@
 
 public class IntegerDivision {
 
-	public static void main(String[] args) {
-		int_div(7, 3);
-		int_div(Integer.MAX_VALUE, 1);
-	}
-
     public static void int_div(Integer a, Integer b) {
     	int quotient = 0;
     	
@@ -16,4 +11,9 @@ public class IntegerDivision {
     	
     	System.out.println(quotient);
     }
+
+	public static void main(String[] args) {
+		int_div(7, 3);
+		int_div(Integer.MAX_VALUE, 1);
+	}
 }

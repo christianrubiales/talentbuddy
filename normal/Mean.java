@@ -1,10 +1,6 @@
 
 public class Mean {
 
-	public static void main(String[] args) {
-		compute_mean(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57});
-	}
-
     public static void compute_mean(Integer[] sample) {
         int sum = 0;
         
@@ -13,4 +9,8 @@ public class Mean {
         }
         System.out.println(sum / sample.length);
     }
+
+	public static void main(String[] args) {
+		compute_mean(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57});
+	}
 }

@@ -4,10 +4,6 @@ import java.util.*;
 
 public class VowelCount {
 
-	public static void main(String[] args) {
-		count_vowels("Get some");
-	}
-
     public static void count_vowels(String s) {
     	Set<Character> set = new HashSet<Character>();
     	set.add('a');set.add('e');set.add('i');set.add('o');set.add('u');
@@ -22,4 +18,8 @@ public class VowelCount {
     	
     	System.out.println(c);
     }
+
+	public static void main(String[] args) {
+		count_vowels("Get some");
+	}
 }

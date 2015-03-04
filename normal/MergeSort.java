@@ -7,18 +7,6 @@ import java.util.Arrays;
  */
 public class MergeSort {
 
-	public static void main(String[] args) {
-		Integer[] a = new Integer[] {2,3,7,8,8};
-		Integer[] b = new Integer[] {7,8,13};
-		
-//		System.out.println(Arrays.deepToString(merge(a, b)));
-		
-//		Integer[] c = new Integer[] {2,3,7,8,8,7,8,13};
-//		Integer[] c = new Integer[] {4,3,5,6,2,5,2,1};
-		Integer[] c = new Integer[] {2, 5, 10, 11, 3, 24, 15, 100, 65};
-		System.out.println(Arrays.deepToString(merge_sort(c)));
-	}
-
     public static Integer[] merge_sort(Integer[] v) {
     	sort(v);
     	
@@ -75,4 +63,16 @@ public class MergeSort {
         
         return c;
     }
+
+	public static void main(String[] args) {
+		Integer[] a = new Integer[] {2,3,7,8,8};
+		Integer[] b = new Integer[] {7,8,13};
+		
+//		System.out.println(Arrays.deepToString(merge(a, b)));
+		
+//		Integer[] c = new Integer[] {2,3,7,8,8,7,8,13};
+//		Integer[] c = new Integer[] {4,3,5,6,2,5,2,1};
+		Integer[] c = new Integer[] {2, 5, 10, 11, 3, 24, 15, 100, 65};
+		System.out.println(Arrays.deepToString(merge_sort(c)));
+	}
 }

@@ -1,10 +1,6 @@
 
 public class Zscore {
 
-	public static void main(String[] args) {
-		compute_zscore(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57}); // -1 -1 1 -1 -2 0 1 0
-	}
-
     public static void compute_zscore(Integer[] sample) {
     	double mean = compute_mean(sample);
     	double stddev = compute_stddev(sample, mean);
@@ -32,4 +28,8 @@ public class Zscore {
         }
         return sum / sample.length;
     }
+
+	public static void main(String[] args) {
+		compute_zscore(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57}); // -1 -1 1 -1 -2 0 1 0
+	}
 }

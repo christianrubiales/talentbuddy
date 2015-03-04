@@ -2,13 +2,6 @@
 
 public class FindCharacter {
 
-	public static void main(String[] args) {
-		find_chr("d", "abcdefabcdef");
-		find_chr("z", "abcdefabcdef");
-		find_chr("a", "abcdefabcdef");
-		find_chr("f", "abcdefabcdef");
-	}
-
     public static void find_chr(String c, String t) {
     	int index = -1;
     	
@@ -21,4 +14,11 @@ public class FindCharacter {
     	
     	System.out.println(index);
     }
+
+	public static void main(String[] args) {
+		find_chr("d", "abcdefabcdef");
+		find_chr("z", "abcdefabcdef");
+		find_chr("a", "abcdefabcdef");
+		find_chr("f", "abcdefabcdef");
+	}
 }

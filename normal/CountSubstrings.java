@@ -1,10 +1,5 @@
 
 public class CountSubstrings {
-
-	public static void main(String[] args) {
-		count_substr("aa", "aaabaaaaa");
-		count_substr("abc", "ababcdabc");
-	}
 	
     public static void count_substr(String s, String t) {
     	int fromIndex = 0;
@@ -19,5 +14,10 @@ public class CountSubstrings {
     	}
     	System.out.println(c);
     }
+
+	public static void main(String[] args) {
+		count_substr("aa", "aaabaaaaa");
+		count_substr("abc", "ababcdabc");
+	}
 
 }

@@ -1,11 +1,5 @@
 
 public class Time {
-
-	public static void main(String[] args) {
-		convert_seconds(34565);
-		convert_seconds(61);
-		convert_seconds(Integer.MAX_VALUE);
-	}
 	
     public static void convert_seconds(Integer seconds) {
     	int h = 0;
@@ -21,5 +15,11 @@ public class Time {
     			(m < 10 ? "0" + m : m) + ":" + 
     			(seconds < 10 ? "0" + seconds : seconds));
     }
+
+	public static void main(String[] args) {
+		convert_seconds(34565);
+		convert_seconds(61);
+		convert_seconds(Integer.MAX_VALUE);
+	}
 
 }

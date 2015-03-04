@@ -4,11 +4,6 @@ import java.util.Set;
 
 public class CountTokens {
 
-	public static void main(String[] args) {
-		count_tokens("anmo", "anatomy");
-		count_tokens("elr", "hello there");
-	}
-
     public static void count_tokens(String a, String t) {
     	Set<Character> set = new HashSet<Character>();
     	int c = 0;
@@ -32,4 +27,9 @@ public class CountTokens {
     	
     	System.out.println(c);
     }
+
+	public static void main(String[] args) {
+		count_tokens("anmo", "anatomy");
+		count_tokens("elr", "hello there");
+	}
 }

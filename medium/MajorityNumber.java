@@ -1,10 +1,6 @@
 
 
 public class MajorityNumber {
-	
-	public static void main(String[] args) {
-		majority(new Integer[]{1,1,2,3,4,1,6,1,7,1,1 });
-	}
 
     public static void majority(Integer[] v) {
     	Integer m = null;
@@ -39,4 +35,8 @@ public class MajorityNumber {
     		System.out.println("None");
     	}
     }
+	
+	public static void main(String[] args) {
+		majority(new Integer[]{1,1,2,3,4,1,6,1,7,1,1 });
+	}
 }

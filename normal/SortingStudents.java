@@ -3,10 +3,6 @@
  * Bubble sort
  */
 public class SortingStudents {
-
-	public static void main(String[] args) {
-		sort_students(new Integer[] {1, 9, 4, 5, 7});
-	}
 	
     public static void sort_students(Integer[] numbers) {
         boolean changed = true;
@@ -27,4 +23,8 @@ public class SortingStudents {
         }
         System.out.println(numbers[numbers.length - 1]);
     }
+
+	public static void main(String[] args) {
+		sort_students(new Integer[] {1, 9, 4, 5, 7});
+	}
 }

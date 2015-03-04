@@ -1,10 +1,6 @@
 
 public class StandardDeviation {
 
-	public static void main(String[] args) {
-		compute_stddev(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57});
-	}
-
     public static void compute_stddev(Integer[] sample) {
     	int mean = compute_mean(sample);
     	
@@ -24,4 +20,8 @@ public class StandardDeviation {
         }
         return sum / sample.length;
     }
+
+	public static void main(String[] args) {
+		compute_stddev(new Integer[]{35, 45, 78, 35, 23, 66, 75, 57});
+	}
 }

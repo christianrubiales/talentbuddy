@@ -1,10 +1,6 @@
 
 public class RemoveSubstring {
 
-	public static void main(String[] args) {
-		remove_substring("abcdefghi", 4, 3); // abcghi
-	}
-
     public static void remove_substring(String s, Integer p, Integer n) {
         for (int i = 0; i < p - 1; i++) {
             System.out.print(s.charAt(i));
@@ -13,4 +9,8 @@ public class RemoveSubstring {
             System.out.print(s.charAt(i));
         }
     }
+
+	public static void main(String[] args) {
+		remove_substring("abcdefghi", 4, 3); // abcghi
+	}
 }

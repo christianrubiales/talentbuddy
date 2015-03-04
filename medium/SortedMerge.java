@@ -1,12 +1,6 @@
 
 
 public class SortedMerge {
-	
-	public static void main(String[] args) {
-		Integer[] a = new Integer[] {2,3,7,8,8};
-		Integer[] b = new Integer[] {7,8,13};
-		merge_arrays(a, b);
-	}
 
     public static void merge_arrays(Integer[] a, Integer[] b) {
         int i = 0;
@@ -32,4 +26,10 @@ public class SortedMerge {
         }
         System.out.println(u.toString().trim());
     }
+	
+	public static void main(String[] args) {
+		Integer[] a = new Integer[] {2,3,7,8,8};
+		Integer[] b = new Integer[] {7,8,13};
+		merge_arrays(a, b);
+	}
 }

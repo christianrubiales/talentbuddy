@@ -1,10 +1,6 @@
 
 
 public class Sqrt {
-
-	public static void main(String[] args) {
-		compute_sqrt(17);
-	}
 	
 	public static void compute_sqrt(Integer n) {
 		double t = n;
@@ -23,5 +19,9 @@ public class Sqrt {
 		} else {
 			return -1 * n;
 		}
+	}
+
+	public static void main(String[] args) {
+		compute_sqrt(17);
 	}
 }
