@@ -1,18 +1,16 @@
 
 /**
- * O(n^2)
+ * Improved O(n^2)
  */
 public class PairProduct {
 
     public static void max_prod(Integer[] v) {
         int max = 0;
-        for (int i = 0; i < v.length; i++) {
-            for (int j = 0; j < v.length; j++) {
-                if (i != j) {
-                    int t = v[i] * v[j];
-                    if (t % 3 == 0 && t > max) {
-                        max = t;
-                    }
+        for (int i = 0; i < v.length - 1; i++) {
+            for (int j = i+1; j < v.length; j++) {
+                int t = v[i] * v[j];
+                if (t % 3 == 0 && t > max) {
+                    max = t;
                 }
             }
         }
