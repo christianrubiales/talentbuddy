@@ -1,6 +1,6 @@
 
 /**
- * O(n)
+ * O(n^2)
  */
 public class PairProduct {
 
