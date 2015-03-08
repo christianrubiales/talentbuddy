@@ -28,7 +28,7 @@ public class TopLocations {
 		sort_locations(1000, 25, 95); // 25 95 1000
 		sort_locations(100, 125, 95); // 95 100 125
 		sort_locations(100, 125, 95); // 95 100 125
-		sort_locations(1, 2, 123456789); // 95 100 125
+		sort_locations(1, 2, 123456789); // 1 2
 	}
 
 }
