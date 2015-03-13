@@ -1,22 +1,22 @@
 
 /**
- * Use modified Boyer-Moore O(n).
+ * Use something similar to Boyer-Moore Majority Vote O(n).
  * Sliding Window is O(n^3).
  */
 public class LongestImprovement {
 
     public static void longest_improvement(Integer[] grades) {
-    	int c = 0;
-    	int m = 0;
+    	int c = 0;//count
+    	int m = 0;//max
     	for (int i = 0; i < grades.length - 1; i++) {
     		if (grades[i] > grades[i+1]) {
-    			c = 0;
+    			m = Math.max(c, m);
+    			c = 1;
     		} else {
     			c++;
     		}
-			m = c > m ? c : m;
     	}
-    	System.out.println(m+1);
+    	System.out.println(m);
     }
 	
     public static void longest_improvement_Sliding_Window(Integer[] grades) {
@@ -45,6 +45,7 @@ public class LongestImprovement {
 		longest_improvement(new Integer[]{9, 7, 8, 2, 5, 5, 8, 7});//4
 		longest_improvement(new Integer[]{3,2,1});//1
 		longest_improvement(new Integer[]{3,2,1,1});//2
+		longest_improvement(new Integer[]{});//0
 	}
 
 }
