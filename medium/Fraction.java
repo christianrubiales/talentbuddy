@@ -1,4 +1,8 @@
 
+/**
+ * Keep adding the original decimal until you get a whole number.
+ * Usual approach is to use a GCD function.
+ */
 public class Fraction {
 
     public static void compute_fraction(String s) {
@@ -15,6 +19,9 @@ public class Fraction {
     
 	public static void main(String[] args) {
 		compute_fraction("1.6");// 8/5
+		compute_fraction("1.50");// 3/2
+		compute_fraction("1.0");// 1/1
+		compute_fraction("2.0");// 2/1
 	}
 
 }
