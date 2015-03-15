@@ -1,35 +1,37 @@
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 
 /**
- * LInkedList-based, removes the first element when max reached. 
- * O(nk), does not finish after 2 seconds for 500,000 elements.
+ * Uses LinkedList and PriorityQueue. O(NlogN)
+ * Does not finish in less than 2 seconds for 500,000 elements.
  */
 public class TweetsPerSecond {
 	
     public static void tweets_per_second(Integer[] tps, Integer k) {
     	final int max = k;
     	
+    	Comparator<Integer> comparator = new Comparator<Integer>() {
+    		@Override
+    		public int compare(Integer o1, Integer o2) {
+    			return o2.compareTo(o1);
+    		}
+		};
+    	
     	LinkedList<Integer> list = new LinkedList<Integer>();
+    	PriorityQueue<Integer> queue = new PriorityQueue<Integer>(k, comparator);
+		Integer first = null;
     	for (Integer i : tps) {
     		if (list.size() == max) {
-    			list.removeFirst();
+    			first = list.get(0);
+    			list.remove(first);
+    			queue.remove(first);
     		}
 			list.add(i);
-			System.out.println(max(list));
+			queue.offer(i);
+			System.out.println(queue.peek());
     	}
-    }
-    
-    public static Integer max(LinkedList<Integer> list) {
-    	Integer m = null;
-    	
-    	for (Integer i : list) {
-    		if (m == null || i > m) {
-    			m = i;
-    		}
-    	}
-    	
-    	return m;
     }
 
 	public static void main(String[] args) {
