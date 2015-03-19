@@ -7,12 +7,18 @@ import java.util.TreeMap;
 
 
 /**
- * Use TreeSet and reverse comparator to sort suffixes by length.
+ * Arrays.sort() and reverse comparator to sort suffixes by length.
  */
 public class QueryTokensStemming {
 
     public static void token_stemming(String[] tokens, String[] suffixes) {
-    	sortBySize(suffixes);
+    	Comparator<String> comparator = new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				return o2.length() - o1.length();
+			}
+		};
+    	Arrays.sort(suffixes, comparator);
     	for (String token : tokens) {
     		boolean hasSuffix = false;
         	for (String suffix : suffixes) {
