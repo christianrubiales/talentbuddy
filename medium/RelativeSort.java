@@ -1,27 +1,19 @@
-import java.util.BitSet;
 
 
 /**
- * Uses BitSet
+ * Just print them out
  */
 public class RelativeSort {
 
     public static void relative_sort(Integer[] v) {
-    	BitSet b = new BitSet(v.length);
-    	
-    	for (int i = 0; i < v.length; i++) {
-    		if (v[i] < 0) {
-    			b.set(i);
+    	for (Integer i : v) {
+    		if (i < 0) {
+    			System.out.print(i + " ");
     		}
     	}
-    	for (int i = 0; i < v.length; i++) {
-    		if (b.get(i)) {
-    			System.out.print(v[i] + " ");
-    		}
-    	}
-    	for (int i = 0; i < v.length; i++) {
-    		if (!b.get(i)) {
-    			System.out.print(v[i] + " ");
+    	for (Integer i : v) {
+    		if (i > -1) {
+    			System.out.print(i + " ");
     		}
     	}
     	System.out.println();
