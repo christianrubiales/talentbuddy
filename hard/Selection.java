@@ -1,28 +1,15 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Arrays;
 
 
 public class Selection {
 
-    /**
-     * Using heap, O(NlogN)
-     */
     public static void select_numbers(Integer[] v, Integer k) {
-    	Deque<Integer> heap = new ArrayDeque<Integer>();
-    	
-    	for (Integer i : v) {
-    		if (i < k) {
-    			heap.offer(i);
-    		}
-    	}
-    	
-    	while (!heap.isEmpty()) {
-    		System.out.print(heap.poll());
-    		if (!heap.isEmpty()) {
-    			System.out.print(" ");
-    		}
-    	}
-    	System.out.println();
+        Arrays.sort(v);
+        
+        for (int i = 0; i < k; i++) {
+            System.out.print(v[i] + " ");
+        }
+        System.out.println();
     }
     
 	public static void main(String[] args) {
